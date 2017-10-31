@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportView" customModule="Arcade_Radar_Version_2" customModuleProvider="target">
+            <connections>
+                <outlet property="findLabel" destination="Fod-oq-dsH" id="vmx-ly-TPT"/>
+                <outlet property="learnMoreButton" destination="7vg-dv-jk3" id="dsi-Kh-1XA"/>
+                <outlet property="noButton" destination="Bb9-ag-Ssc" id="LpF-2F-n5m"/>
+                <outlet property="notFindLabel" destination="904-Ps-GLk" id="Jc5-fu-oPe"/>
+                <outlet property="questionLabel" destination="5eX-uK-LYH" id="LYW-5p-fvl"/>
+                <outlet property="yesButton" destination="pQp-x6-bJ9" id="6Jm-Rl-y4u"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Were you able to find this arcade?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5eX-uK-LYH">
+                    <rect key="frame" x="5.5" y="12" width="364.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="AxR-LL-JXn">
+                    <rect key="frame" x="36.5" y="44.5" width="302" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQp-x6-bJ9" customClass="ReportButton" customModule="Arcade_Radar_Version_2" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="131" height="30"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Moh-Ta-iXZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="YES">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="yesButtonPressed:" destination="-1" eventType="touchUpInside" id="OA4-Qk-mRK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bb9-ag-Ssc" customClass="ReportButton" customModule="Arcade_Radar_Version_2" customModuleProvider="target">
+                            <rect key="frame" x="171" y="0.0" width="131" height="30"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="xvH-LU-O9O"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="NO">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="noButtonPressed:" destination="-1" eventType="touchUpInside" id="obE-p7-icq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="pQp-x6-bJ9" firstAttribute="width" secondItem="Bb9-ag-Ssc" secondAttribute="width" id="7vd-3W-PTH"/>
+                        <constraint firstAttribute="height" constant="30" id="rAs-NJ-tyb"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 have visited " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fod-oq-dsH">
+                    <rect key="frame" x="48.5" y="75.5" width="108.5" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Vmv-wc-e1U"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.792156862745098" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 were misled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="904-Ps-GLk">
+                    <rect key="frame" x="226.5" y="75.5" width="94" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Nwr-dq-wLI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="12"/>
+                    <color key="textColor" red="1" green="0.54117647058823526" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vg-dv-jk3">
+                    <rect key="frame" x="143.5" y="92" width="87" height="33"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                    <state key="normal" title="Learn More">
+                        <color key="titleColor" red="0.0" green="0.79215686269999996" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="learnMorePressed:" destination="-1" eventType="touchUpInside" id="jkh-mZ-buL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="904-Ps-GLk" firstAttribute="centerX" secondItem="Bb9-ag-Ssc" secondAttribute="centerX" id="2lY-HM-YgE"/>
+                <constraint firstItem="7vg-dv-jk3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="40a-tI-zbT"/>
+                <constraint firstItem="5eX-uK-LYH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6lC-qB-2x0"/>
+                <constraint firstItem="Fod-oq-dsH" firstAttribute="centerX" secondItem="pQp-x6-bJ9" secondAttribute="centerX" id="8cH-KO-DU8"/>
+                <constraint firstAttribute="bottom" secondItem="7vg-dv-jk3" secondAttribute="bottom" constant="5" id="Gef-NS-hns"/>
+                <constraint firstItem="Bb9-ag-Ssc" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.35" id="KmV-MH-T7v"/>
+                <constraint firstItem="AxR-LL-JXn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OQd-xv-1hM"/>
+                <constraint firstItem="5eX-uK-LYH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="RVQ-Qf-3uS"/>
+                <constraint firstItem="7vg-dv-jk3" firstAttribute="top" relation="lessThanOrEqual" secondItem="AxR-LL-JXn" secondAttribute="bottom" constant="20" id="cAH-N0-eNS"/>
+                <constraint firstItem="904-Ps-GLk" firstAttribute="top" secondItem="Bb9-ag-Ssc" secondAttribute="bottom" constant="1" id="f8s-kY-L3Z"/>
+                <constraint firstItem="AxR-LL-JXn" firstAttribute="top" secondItem="5eX-uK-LYH" secondAttribute="bottom" constant="12" id="feY-6Q-j6a"/>
+                <constraint firstAttribute="trailing" secondItem="5eX-uK-LYH" secondAttribute="trailing" constant="5" id="ix3-wM-jsu"/>
+                <constraint firstItem="5eX-uK-LYH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="pt1-0u-6Cw"/>
+                <constraint firstItem="Fod-oq-dsH" firstAttribute="top" secondItem="AxR-LL-JXn" secondAttribute="bottom" constant="1" id="qPA-li-lwB"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="69.5" y="375"/>
+        </view>
+    </objects>
+</document>
